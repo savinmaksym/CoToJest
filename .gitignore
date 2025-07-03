@@ -1,0 +1,32 @@
+# Системні файли
+.DS_Store
+Thumbs.db
+
+# Node.js залежності (якщо ти використовуєш npm)
+node_modules/
+
+# Лог-файли
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Вихідні збірки (якщо ти збираєш сайт з шаблонізаторів, Webpack, Parcel тощо)
+dist/
+build/
+out/
+
+# Кеш браузера/IDE
+.cache/
+.vscode/
+.idea/
+.vs/
+
+# OS специфічні файли
+*.swp
+*.bak
+*.tmp
+
+# Середовище (не додавай особисту конфігурацію)
+.env
+.env.local
+.env.*.local

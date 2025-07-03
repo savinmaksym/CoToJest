@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <title>Сторінка ABC</title>
+    <meta charset="UTF-8" />
+    <title>Co to jest?</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <h1>Це сторінка /abc</h1>
-  <p>Привіт! Це мій тестовий підсайт на GitHub Pages.</p>
+    <h1>Простий таймер</h1>
+    <div id="timer">00:00</div>
+    <button onclick="startTimer()" id="startBtn">Старт</button>
+    <button onclick="stopTimer()" id="stopBtn" disabled>Стоп</button>
+    <button onclick="resetTimer()">Скинути</button>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>

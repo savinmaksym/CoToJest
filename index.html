@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8" />
     <title>Co to jest?</title>
     <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-    <h1>Простий таймер</h1>
-    <div id="timer">00:00</div>
-    <button onclick="startTimer()" id="startBtn">Старт</button>
-    <button onclick="stopTimer()" id="stopBtn" disabled>Стоп</button>
-    <button onclick="resetTimer()">Скинути</button>
-
     <script src="scripts/script.js"></script>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Co to jest?</h1>
+    <h2>Вибери категорію</h2>
+
+    <!--<div id="timer">00:00</div>-->
+    <!--<button onclick="startTimer()" id="startBtn">Старт</button>
+    <button onclick="stopTimer()" id="stopBtn" disabled>Стоп</button>
+    <button onclick="resetTimer()">Скинути</button>-->
+
+    
+    <table>
+        <tr>
+            <td><button onclick="choose_category(0)">їжа</button></td>
+            <td><button onclick="choose_category(1)">транспорт</button></td>
+            <td><button onclick="choose_category(2)">тварини</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="choose_category(3)">одяг</button></td>
+            <td><button onclick="choose_category(4)">професії</button></td>
+        </tr>
+    </table>
+
+    
 </body>
 </html>

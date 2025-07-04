@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Co to jest?</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="scripts/script.js"></script>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+
+    <button id="btn_back" onclick="go_to_index()">Назад</button>
+</head>
+
+<body>
+    <h1>Co to jest?</h1>
+    <h2 id="category">error</h2>
+
+
+    <div id="space">
+
+        <div class="box">
+            <p id="label">Хто розпочинає</p>
+            <div class="switcher">
+                <p id="player1">Гравець 1</p>
+                <label class="switch">
+                    <input type="checkbox" id="mySwitch">
+                    <span class="slider"></span>
+                </label>
+                <p id="player2">Гравець 2</p>
+            </div>
+            <p id="label">Тривалість раунда в сек</p>
+            <input id="seconds" class="input" name="number" type="number" placeholder="Секунд">
+            <p id="label">Штраф в сек</p>
+            <input id="penalty" class="input" name="number" type="number" placeholder="Секунд">
+            <button id="save" onclick="save(this)">Зберегти</button>
+        </div>
+
+
+
+
+        <div id="pl1">
+            Гравець 1
+            <div id="timer1">00:00</div>
+        </div>
+        
+        <div id="pl2">
+            Гравець 2
+            <div id="timer2">00:00</div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

@@ -5,7 +5,7 @@ let categories = [["продукти", "фрукти-овочі", "трансп�
                    [31,           35,             31,         31,       34,          17]];
 let penalty = 0;
 let choosed_category = "category";
-const extensions = ["jpg", "jpeg", "png", "webp", "jfif", "JPG"];
+const extensions = ["jfif", "webp", "jpg", "jpeg", "png", "JPG"];
 //const maxImageNumber = 31;
 let game_ready = false;
 let id = 0;
@@ -47,18 +47,18 @@ function pressed(s) {
     showRandomImage();
 
     if (who == true) {
-        flashGreen();
         miliseconds[0] = miliseconds[0] - (s * 100);
         startTimer(1);
         stopTimer(0);
         
     } else {
-        flashRed();
         miliseconds[1] = miliseconds[1] - (s * 100);
         startTimer(0);
         stopTimer(1);
         
     }
+    if (s == 0) flashGreen();
+    else flashRed();
     who = !who; 
 }
 

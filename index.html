@@ -1,36 +1,68 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uk">
 
 <head>
     <meta charset="UTF-8" />
     <title>Co to jest?</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <link rel="icon" href="images/icon.png" type="image/x-icon">
+
 </head>
 
 <body>
     <h1>Co to jest?</h1>
-    <h2>Вибери категорію</h2>
+    <h2 id="category">категорія</h2>
 
-    <!--<div id="timer">00:00</div>-->
-    <!--<button onclick="startTimer()" id="startBtn">Старт</button>
-    <button onclick="stopTimer()" id="stopBtn" disabled>Стоп</button>
-    <button onclick="resetTimer()">Скинути</button>-->
 
-    
-    <table>
-        <tr>
-            <td><button onclick="choose_category(0)">їжа</button></td>
-            <td><button onclick="choose_category(1)">транспорт</button></td>
-            <td><button onclick="choose_category(2)">тварини</button></td>
-        </tr>
-        <tr>
-            <td><button onclick="choose_category(3)">одяг</button></td>
-            <td><button onclick="choose_category(4)">професії</button></td>
-        </tr>
-    </table>
+    <div id="space">
 
-    
+        <div class="box">
+            <p id="label">Хто розпочинає</p>
+            <div class="switcher">
+                <p id="player1">Гравець 1</p>
+                <label class="switch">
+                    <input type="checkbox" id="mySwitch">
+                    <span class="slider"></span>
+                </label>
+                <p id="player2">Гравець 2</p>
+            </div>
+
+            <p id="label" for="mySelect">Вибери категорію:</p>
+            <select class="input" id="mySelect">
+                <option value="0">продукти</option>
+                <option value="1">фрукти-овочі</option>
+                <option value="2">транспорт</option>
+                <option value="3">одяг</option>
+                <option value="4">тварини</option>
+                <option value="5">професії</option>
+            </select>
+
+            <p id="label">Тривалість раунда в сек</p>
+            <input id="seconds" class="input" name="number" type="number" placeholder="Секунд">
+            <p id="label">Штраф в сек</p>
+            <input id="penalty" class="input" name="number" type="number" placeholder="Секунд">
+            <button id="save" onclick="save(this)">Зберегти</button>
+        </div>
+
+
+
+
+        <div id="pl1">
+            Гравець 1
+            <div id="timer1">00:00</div>
+        </div>
+
+        <img id="randomImage" src="">
+
+        <div id="pl2">
+            Гравець 2
+            <div id="timer2">00:00</div>
+        </div>
+
+    </div>
+
+    <p id="help_text">SPACE - правильна відповідь. ENTER - пас та нарахування штрафу</p>
+
 </body>
 </html>

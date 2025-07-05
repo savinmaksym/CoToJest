@@ -45,16 +45,16 @@ button {
 }
 
 .box {
-    display: inline-block;
+    /*display: inline-block;*/
     width: 300px;
-    height: 300px;
+    height: 370px;
     border: 2px solid #4caf50;
     border-radius: 10px;
     padding: 0px;
     background-color: white;
-    position: relative;
+    position: absolute;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    right: 41%;
+    left: 10px;
 }
 
 .switcher{
@@ -162,7 +162,7 @@ button {
 }
 #pl2 {
     position: absolute;
-    left: 75%;
+    left: 70%;
     font-size: 30px;
     
 }
@@ -172,4 +172,31 @@ button {
 }
 .flash-red {
     background-color: red; 
+}
+
+#mySelect {
+    font-size: 15px;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+    border-radius: 5%;
+    border-color: #4caf50;
+    position: relative;
+    right: 0%;
+}
+
+#help_text {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    font-size: 20px;
+    color: #333;
+   
+    padding: 10px;
+   
+    
+
 }

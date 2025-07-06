@@ -1,8 +1,8 @@
 ﻿let miliseconds = [0, 0]; 
 let interval = [null, null];
 let who = false;
-let categories = [["продукти", "фрукти-овочі", "транспорт", "одяг", "тварини", "професії"],
-                   [31,           35,             31,         31,       34,          17]];
+let categories = [["продукти", "фрукти-овочі", "транспорт", "одяг-аксесуари", "тварини", "професії-спорт", "техніка", "побут", "канцелярія"],
+                   [31,           35,             31,         40,               34,          32,              35,        40,       34 ]];
 let penalty = 0;
 let choosed_category = "category";
 const extensions = ["jfif", "webp", "jpg", "jpeg", "png", "JPG"];

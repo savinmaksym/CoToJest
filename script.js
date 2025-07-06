@@ -74,7 +74,7 @@ document.addEventListener("keyup", function (e) {
     if (e.code === "Space") {
         pressed(0);  
     } else if (e.code === "Enter") {
-        pressed(penalty)
+        pressed(penalty);
     }
 });
 

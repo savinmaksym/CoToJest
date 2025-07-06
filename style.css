@@ -135,14 +135,14 @@ button {
 
 #timer1 {
     position: absolute;
-    font-size: 90px;
+    font-size: 140px;
     color: #333;
     margin-top: 10px;
     left: -20%;
 }
 #timer2 {
     position: absolute;
-    font-size: 90px;
+    font-size: 140px;
     color: #333;
     margin-top: 10px;
     left: -20%;
@@ -156,14 +156,14 @@ button {
 
 #pl1 {
     position: absolute;
-    left: 25%;
-    font-size: 30px;
+    left: 23%;
+    font-size: 40px;
     
 }
 #pl2 {
     position: absolute;
-    left: 70%;
-    font-size: 30px;
+    left: 76%;
+    font-size: 40px;
     
 }
 
@@ -179,13 +179,14 @@ button {
 }
 
 img {
-    width: 400px;
-    height: 400px;
-    margin-top: 100px;
+    width: 600px;
+    height: 600px;
+    margin-top: 80px;
     border-radius: 5%;
     border-color: #4caf50;
     position: relative;
-    right: 0%;
+    right: -7%;
+    object-fit: contain;
 }
 
 #help_text {

@@ -1,0 +1,31 @@
+1 statek wycieczkowy  
+2 pociąg elektryczny  
+3 winda  
+4 samolot  
+5 wózek dziecięcy  
+6 kareta  
+7 snowboard  
+8 tir  
+9 wózek inwalidzki  
+10 rower  
+11 hulajnoga  
+12 czołg  
+13 samochód  
+14 motocykl  
+15 autobus  
+16 tramwaj  
+17 jacht  
+18 okręt podwodny  
+19 helikopter  
+20 rakieta  
+21 rolki  
+22 narty  
+23 deskorolka  
+24 lotnia  
+25 kajak  
+26 skuter wodny  
+27 szybowiec  
+28 spadochron  
+29 sterowiec  
+30 tratwa  
+31 traktor  

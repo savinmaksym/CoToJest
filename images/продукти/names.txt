@@ -1,0 +1,31 @@
+1 makaron  
+2 śmietana  
+3 orzechy  
+4 lody  
+5 kasza gryczana  
+6 chipsy  
+7 mleko  
+8 mięso  
+9 piwo  
+10 krewetki  
+11 wódka  
+12 śmietanka  
+13 bułka (baton)  
+14 ryż  
+15 olej  
+16 masło  
+17 herbata  
+18 cukier  
+19 whisky  
+20 pizza  
+21 jajka  
+22 grzyby  
+23 pączki  
+24 kawior  
+25 sól  
+26 ser  
+27 imbir  
+28 ryba  
+29 ciastka  
+30 miód  
+31 keczup  

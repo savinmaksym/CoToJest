@@ -1,15 +1,23 @@
 ﻿let miliseconds = [0, 0]; 
 let interval = [null, null];
 let who = false;
-let categories = [["продукти", "фрукти-овочі", "транспорт", "одяг-аксесуари", "тварини", "професії-спорт", "техніка", "побут", "канцелярія"],
-                   [31,           35,             31,         40,               34,          32,              35,        40,       34 ]];
+let categories = [[],[]];
 let penalty = 0;
 let choosed_category = "category";
 const extensions = ["jfif", "webp", "jpg", "jpeg", "png", "JPG"];
-//const maxImageNumber = 31;
 let game_ready = false;
 let id = 0;
 const usedNumbers = [];
+const url_categories = "images/categories.txt";
+let names_imgs = [];
+let random_id_img = 0;
+let game_started = false;
+let playing = false; 
+
+
+
+
+
 
 function save(btn) {
     btn.blur();
@@ -30,51 +38,115 @@ function save(btn) {
     stopTimer(0);
     stopTimer(1);
     updateDisplay();
-    id = parseInt(document.getElementById("mySelect").value);
+    id = parseInt(document.getElementById("categorySelect").value);
     choosed_category = categories[0][id];
     document.getElementById("category").innerText = choosed_category;
     document.getElementById("randomImage").src = "images/icon.png"; 
     usedNumbers.length = 0;
+    playing = false;
+    game_started = false;
+    showname(false);
+    loadNamesImgsFromFile(`images/${choosed_category}/names.txt`);
     game_ready = true;
+    flashSaved();
+}
+
+function play1() {
+    showRandomImage();
+    startTimer(1);
+}
+function play2() {
+    showRandomImage();
+    startTimer(0);
+}
+function stop1() {
+    stopTimer(1);
+}
+function stop2() {
+    stopTimer(0);
 }
 
 
-function pressed(s) {
+function pressed(pres) {
     if (!game_ready) {
         alert("Будь ласка, спочатку налаштуйте гру.");
         return;
     }
-    showRandomImage();
 
-    if (who == true) {
-        miliseconds[0] = miliseconds[0] - (s * 100);
-        startTimer(1);
-        stopTimer(0);
-        
-    } else {
-        miliseconds[1] = miliseconds[1] - (s * 100);
-        startTimer(0);
-        stopTimer(1);
-        
+    if (!game_started) {
+        flashGreen();
+        if (who) play1();
+        else play2();
+        game_started = true;
+        playing = true;
+        return;
     }
-    if (s == 0) flashGreen();
-    else flashRed();
-    who = !who; 
+
+    if (playing) {
+        if (who) {
+            stop1();
+            if (!pres) {
+                miliseconds[1] = miliseconds[1] - (penalty * 100);
+                if (miliseconds[1] < 0) miliseconds[1] = 0; // Запобігаємо негативним значенням
+                updateDisplay();
+                flashRed();
+            }
+            else {
+                flashGreen();
+            }
+        }
+        else {
+            stop2();
+            if (!pres) {
+                miliseconds[0] = miliseconds[0] - (penalty * 100);
+                if (miliseconds[0] < 0) miliseconds[0] = 0; // Запобігаємо негативним значенням
+                updateDisplay();
+                flashRed();
+            }
+            else {
+                flashGreen();
+            }
+        }
+        showname(true);
+        who = !who;
+        playing = false;
+    }
+    else {
+        showname(false);
+        if (who) {
+            play1();
+        } else {
+            play2();
+        }
+        playing = true;
+    }
 }
+
+function showname(flag) {
+    if (flag) {
+        document.getElementById("nameimg").innerText = names_imgs[random_id_img] || "Ім'я не знайдено";
+        document.getElementById("nameimg").style.opacity = "1";
+    } else {
+        document.getElementById("nameimg").style.opacity = "0";
+    }
+}
+
 
 
 
 
 window.addEventListener("DOMContentLoaded", () => { // Дочекаємося завантаження сторінки
+    loadCategoriesFromFile(url_categories);
     document.getElementById("randomImage").src = "images/icon.png";
+    
 });
 
 
 document.addEventListener("keyup", function (e) {
     if (e.code === "Space") {
-        pressed(0);  
+        pressed(true);  
     } else if (e.code === "Enter") {
-        pressed(penalty);
+        pressed(false);
     }
 });
 
@@ -84,12 +156,14 @@ function cheakWinner() {
     if (miliseconds[0] <= 0) {
         stopTimer(0);
         stopTimer(1);
+        updateDisplay();
         alert("Гравець 2 виграв!");
         game_ready = false; 
         usedNumbers.length = 0; 
     } else if (miliseconds[1] <= 0) {
         stopTimer(1);
         stopTimer(0);
+        updateDisplay();
         alert("Гравець 1 виграв!");
         game_ready = false;
         usedNumbers.length = 0;
@@ -108,6 +182,7 @@ function showRandomImage() {
         randomNumber = Math.floor(Math.random() * categories[1][id]) + 1;
     } while (usedNumbers.includes(randomNumber));
     usedNumbers.push(randomNumber); 
+    random_id_img = randomNumber; // Зберігаємо номер зображення для подальшого використання
     tryNextExtension(randomNumber, 0);
 }
 
@@ -131,12 +206,6 @@ function tryNextExtension(imageNumber, extIndex) {
 
     img.src = filePath;
 }
-
-
-
-
-
-
 
 
 
@@ -193,4 +262,87 @@ function flashRed() {
     setTimeout(() => {
         body.classList.remove("flash-red");
     }, 300);
+}
+function flashSaved() {
+    const el = document.getElementById("label_saved");
+    el.classList.add("flash");
+    setTimeout(() => {
+        el.classList.remove("flash");
+    }, 1000);
+}
+
+
+function loadCategoriesFromFile(url) {
+    fetch(url)
+        .then(res => {
+            if (!res.ok) throw new Error("Помилка завантаження файлу");
+            return res.text();
+        })
+        .then(text => {
+            const lines = text.trim().split("\n");
+
+            const names = [];
+            const values = [];
+
+            for (let line of lines) {
+                line = line.trim().replace(/\s+/g, ' ');
+
+                const lastSpace = line.lastIndexOf(' ');
+                if (lastSpace === -1) continue;
+
+                const name = line.slice(0, lastSpace).trim();
+                const value = parseInt(line.slice(lastSpace + 1), 10);
+
+                if (name && !isNaN(value)) {
+                    names.push(name);
+                    values.push(value);
+                    console.log(`Категорія: ${name}, Кількість: ${value}`);
+                }
+            }
+            // Оновлюємо глобальний масив
+            categories = [names, values];
+            fillSelectOptions();
+        })
+        .catch(err => {
+            console.error("Помилка:", err);
+        });
+}
+
+
+function fillSelectOptions() {
+    const select = document.getElementById("categorySelect");
+    const names = categories[0];
+    names.forEach((name, id) => {
+        const option = document.createElement("option");
+        option.value = id;         // можна також name або id
+        option.textContent = name;
+        select.appendChild(option);
+    });
+}
+
+
+function loadNamesImgsFromFile(url) {
+    fetch(url)
+        .then(res => {
+            if (!res.ok) throw new Error("Файл не знайдено");
+            return res.text();
+        })
+        .then(text => {
+            const lines = text.trim().split("\n");
+
+            lines.forEach(line => {
+                // Прибрати зайві пробіли
+                line = line.trim().replace(/\s+/g, ' ');
+
+                // Розділити на номер і назву
+                const [indexStr, ...nameParts] = line.split(' ');
+                const index = parseInt(indexStr, 10);
+                const name = nameParts.join(' ');
+
+                if (!isNaN(index) && name) {
+                    names_imgs[index] = name;
+                }
+            });
+        })
+        .catch(err => console.error("Помилка:", err));
 }

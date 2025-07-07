@@ -28,17 +28,9 @@
                 <p id="player2">Гравець 2</p>
             </div>
 
-            <p id="label" for="mySelect">Вибери категорію:</p>
-            <select class="input" id="mySelect">
-                <option value="0">продукти</option>
-                <option value="1">фрукти-овочі</option>
-                <option value="2">транспорт</option>
-                <option value="3">одяг-аксесуари</option>
-                <option value="4">тварини</option>
-                <option value="5">професії-спорт</option>
-                <option value="6">техніка</option>
-                <option value="7">побут</option>
-                <option value="8">канцелярія</option>
+            <p id="label" for="categorySelect">Вибери категорію:</p>
+            <select class="input" id="categorySelect">
+                <option disabled selected>Оберіть категорію</option>
             </select>
 
             <p id="label">Тривалість раунда в сек</p>
@@ -46,6 +38,7 @@
             <p id="label">Штраф в сек</p>
             <input id="penalty" class="input" name="number" type="number" placeholder="Секунд">
             <button id="save" onclick="save(this)">Зберегти</button>
+            <p id="label_saved">Збережено!</p>
         </div>
 
 
@@ -58,13 +51,13 @@
 
         <img id="randomImage" src="">
 
+
         <div id="pl2">
             Гравець 2
             <div id="timer2">00:00</div>
         </div>
-
     </div>
-
+    <p id="nameimg"></p>
     <p id="help_text">SPACE - правильна відповідь. ENTER - пас та нарахування штрафу</p>
 
 </body>

@@ -1,0 +1,39 @@
+1 torba  
+2 plecak  
+3 trampki  
+4 czapka z daszkiem  
+5 sukienka  
+6 koszulka  
+7 top dziewczęcy  
+8 spódnica  
+9 koszula  
+10 dżinsy  
+11 skarpetki  
+12 obcasy  
+13 kozaki  
+14 szorty  
+15 spodnie  
+16 garnitur  
+17 majtki  
+18 czapka zimowa  
+19 rękawiczki  
+20 maseczka  
+21 okulary  
+22 szalik  
+23 podkoszulek  
+24 kostium kąpielowy  
+25 dres  
+26 biustonosz  
+27 kurtka  
+28 kapelusz przeciwsłoneczny  
+29 klapki  
+30 sandały  
+31 rajstopy  
+32 krawat
+33 muszka  
+34 bransoletka  
+35 obrączka  
+36 łańcuszek 
+37 piercing  
+38 kolczyk  
+39 zegarek 

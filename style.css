@@ -1,29 +1,30 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding-top: 0px;
+    padding-top: 0vw;
     background-color: white;
     transition: background-color 0.5s ease;
 }
 
 h1 {
-    font-size: 40px;
-    margin-bottom: -20px;
-    margin-top: 10px;
+    font-size: 2vw;
+    margin-bottom: -1vw;
+    margin-top: -0.5vw;
 }
 h2 {
-    margin-bottom: 5px;
-}
+    margin-bottom: 1vw;
+    font-size: 1.5vw;
+} 
 
 
-
+ 
 button {
-    margin: 10px;
-    padding: 10px 10px;
-    font-size: 20px;
+    margin: 1vw;
+    padding: 0.6vw;
+    font-size: 1vw;
     cursor: pointer;
     border: none;
-    border-radius: 6px;
+    border-radius: 0.5vw;
     background-color: #4caf50;
     color: white;
 }
@@ -32,54 +33,41 @@ button {
     button:hover {
         background-color: #45a049;
     }
-/*
-    button:disabled {
-        background-color: #aaa;
-        cursor: not-allowed;
-    }*/
 
-
-
-#btn_back{
-    left: 10px;
-    position: absolute;
-    top: 10px;
-    padding: 10px 20px;
-}
 
 .box {
-    /*display: inline-block;*/
-    width: 300px;
-    height: 420px;
-    border: 2px solid #4caf50;
-    border-radius: 10px;
-    padding: 0px;
+    width: 15vw;
+    height: 24vw;
+    border: 0.2vw solid #4caf50;
+    border-radius: 1vw;
+    padding: 0vw;
     background-color: white;
     position: absolute;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    left: 10px;
+    left: 1vw;
 }
 
-.switcher{
+.switcher {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0px;
+    margin-top: 0vw;
+    margin-bottom: 0.5vw;
 }
 
 #player1, #player2 {
-    margin-top: 5px;
+    margin-top: 1vw;
     display: flex;
+    font-size: 1vw;
 }
 
 .switch {
-    margin: 10px;
-    margin-top : 3px;
+    margin: 0.5vw;
+    margin-top: 0.2vw;
+    margin-bottom: 0.2vw;
     position: relative;
     display: inline-block;
-    width: 54px;
-    height: 28px;
-    
+    width: 2.8vw;
+    height: 1.45vw;
 }
 
     .switch input {
@@ -97,57 +85,62 @@ button {
     bottom: 0;
     background-color: #4caf50;
     transition: 0.4s;
-    border-radius: 28px;
+    border-radius: 1vw;
 }
 
     .slider:before {
         position: absolute;
         content: "";
-        height: 20px;
-        width: 20px;
-        left: 4px;
-        bottom: 4px;
+        height: 1vw;
+        width: 1vw;
+        left: 0.25vw;
+        bottom: 0.2vw;
         background-color: white;
         transition: 0.4s;
-        border-radius: 50%;
+        border-radius: 1vw;
     }
 
 
-    input:checked + .slider:before {
-        transform: translateX(26px);
-    }
+input:checked + .slider:before {
+    transform: translateX(1.3vw);
+}
 
 
 #label {
-    font-size: 18px;
+    font-size: 1vw;
     color: #333;
-    margin-top: 10px;  
-    margin-bottom: 3px;
+    margin-top: 0.5vw;
+    margin-bottom: 0vw;
 }
 
 .input {
-    height: 40px;
-    border-radius: 8px;
-    border: 2px solid #4caf50;
+    height: 2vw;
+    width: 10.6vw;
+    font-size: 0.8vw;
+    border-radius: 0.5vw;
+    border: 0.2vw solid #4caf50;
     outline: none;
     transition: 200ms ease-in;
-    padding-left: 1rem;
+    padding-left: 0.5vw;
+    padding-right: 0.4vw;
+    margin-top: 0.1vw;
+    margin-bottom: 0.1vw;
 }
 
 
 
 #timer1 {
     position: absolute;
-    font-size: 140px;
+    font-size: 8vw;
     color: #333;
-    margin-top: 10px;
+    margin-top: 0vw;
     left: -20%;
 }
 #timer2 {
     position: absolute;
-    font-size: 140px;
+    font-size: 8vw;
     color: #333;
-    margin-top: 10px;
+    margin-top: 0vw;
     left: -20%;
 }
 
@@ -159,15 +152,13 @@ button {
 
 #pl1 {
     position: absolute;
-    left: 23%;
-    font-size: 40px;
-    
+    left: 22%;
+    font-size: 3vw;
 }
 #pl2 {
     position: absolute;
-    left: 76%;
-    font-size: 40px;
-    
+    left: 80%;
+    font-size: 3vw;
 }
 
 .flash-green {
@@ -178,33 +169,29 @@ button {
 }
 
 #categorySelect {
-    font-size: 15px;
+    font-size: 1vw;
 }
 
 img {
-    width: 600px;
-    height: 600px;
-    margin-top: 0px;
-    border-radius: 5%;
-    border-color: #4caf50;
+    width: 35vw;
+    height: 35vw;
+    margin-top: 0vw;
     position: relative;
-    right: -7%;
+    right: -8%;
     object-fit: contain;
 }
 
 #help_text {
     position: absolute;
-    bottom: 0px;
-    left: 10px;
-    font-size: 20px;
+    bottom: 0vw;
+    left: 1vw;
+    font-size: 1vw;
     color: #333;
-    padding: 10px;
+    padding: 0vw;
 }
 
 #label_saved {
-    top: 10px;
-    left: 10px;
-    font-size: 20px;
+    font-size: 1vw;
     color: #4caf50;
     font-weight: bold;
     opacity: 0;
@@ -218,22 +205,28 @@ img {
 #nameimg {
     background-color: white;
     position: relative;
-    left: 50%;
-    bottom: 60px;
-    border-radius: 20px;
-    padding: 10px;
-    border: 5px solid #4caf50;
-    font-size: 60px;
+    left: 8%;
+    border-radius: 1vw;
+    padding: 0.5vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.1vw;
+    border: 0.5vw solid #4caf50;
+    font-size: 4vw;
     opacity: 0;
-    width:fit-content;
+    width: fit-content;
     height: fit-content;
+    top: 0vw;
+    margin: 0 auto;
+    margin-top: 1vw;
 }
 
 .custom-checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 13px;
+    margin-top: 0.8vw;
+    margin-bottom: 0.5vw;
+    font-size: 0.85vw;
     display: inline-flex;
     align-items: center;
     cursor: pointer;
@@ -245,22 +238,22 @@ img {
     }
 
     .custom-checkbox .checkmark {
-        width: 20px;
-        height: 20px;
-        border: 2px solid #4caf50;
-        border-radius: 4px;
-        margin-right: 10px;
+        width: 1vw;
+        height: 1vw;
+        border: 0.2vw solid #4caf50;
+        border-radius: 0.4vw;
+        margin-right: 0.2vw;
         position: relative;
     }
 
     .custom-checkbox input:checked + .checkmark::after {
         content: '';
         position: absolute;
-        left: 4px;
-        top: 0px;
-        width: 6px;
-        height: 12px;
+        left: 0.3vw;
+        top: 0vw;
+        width: 0.32vw;
+        height: 0.5vw;
         border: solid #2e6037;
-        border-width: 0 2px 2px 0;
+        border-width: 0vw 0.2vw 0.2vw 0vw;
         transform: rotate(45deg);
     }

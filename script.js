@@ -4,7 +4,7 @@ let who = false;
 let categories = [[],[]];
 let penalty = 0;
 let choosed_category = "category";
-const extensions = ["jfif", "webp", "jpg", "jpeg", "png", "JPG"];
+const extensions = ["webp","jfif", "jpg", "jpeg", "png", "JPG"];
 let game_ready = false;
 let id = 0;
 const usedNumbers = [];
@@ -14,6 +14,8 @@ let random_id_img = 0;
 let game_started = false;
 let playing = false; 
 let checkbox_shownameimg = false;
+let url_pre_image = "";
+let randomNumber;
 
 
 
@@ -55,15 +57,18 @@ function save(btn) {
     loadNamesImgsFromFile(`images/${choosed_category}/names.txt`);
     game_ready = true;
     flashSaved();
+    generatePreImage()
 }
 
 function play1() {
     showRandomImage();
     startTimer(1);
+    generatePreImage()
 }
 function play2() {
     showRandomImage();
     startTimer(0);
+    generatePreImage()
 }
 function stop1() {
     stopTimer(1);
@@ -186,19 +191,25 @@ function cheakWinner() {
 }
 
 
-function showRandomImage() {
+function generatePreImage() {
     if (usedNumbers.length >= categories[1][id]) {
         console.log("Усі картинки вже були показані!");
         usedNumbers.length = 0;
-        return;
+        generatePreImage();
     }
-    let randomNumber;
+    
     do {
         randomNumber = Math.floor(Math.random() * categories[1][id]) + 1;
     } while (usedNumbers.includes(randomNumber));
     usedNumbers.push(randomNumber); 
-    random_id_img = randomNumber; // Зберігаємо номер зображення для подальшого використання
     tryNextExtension(randomNumber, 0);
+}
+
+
+function showRandomImage() {
+    random_id_img = randomNumber; 
+    document.getElementById("randomImage").src = url_pre_image; 
+   
 }
 
 function tryNextExtension(imageNumber, extIndex) {
@@ -212,7 +223,7 @@ function tryNextExtension(imageNumber, extIndex) {
     const img = new Image();
 
     img.onload = function () {
-        document.getElementById("randomImage").src = filePath;
+        url_pre_image = filePath;
     };
 
     img.onerror = function () {

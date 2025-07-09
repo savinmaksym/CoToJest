@@ -13,10 +13,15 @@ let names_imgs = [];
 let random_id_img = 0;
 let game_started = false;
 let playing = false; 
+let checkbox_shownameimg = false;
 
 
 
-
+function blockIfMobile() {
+    if (/Mobi|Android|iPhone|iPad|iPod|Oppo|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    document.body.innerHTML = "<h2 style='text-align:center; padding-top:50px;'>Сайт недоступний на мобільних пристроях</h2>";
+  }
+}
 
 
 function save(btn) {
@@ -45,6 +50,7 @@ function save(btn) {
     usedNumbers.length = 0;
     playing = false;
     game_started = false;
+    checkbox_shownameimg = document.getElementById("cheakBox_showNameImg");
     showname(false);
     loadNamesImgsFromFile(`images/${choosed_category}/names.txt`);
     game_ready = true;
@@ -87,7 +93,6 @@ function pressed(pres) {
             stop1();
             if (!pres) {
                 miliseconds[1] = miliseconds[1] - (penalty * 100);
-                if (miliseconds[1] < 0) miliseconds[1] = 0; // Запобігаємо негативним значенням
                 updateDisplay();
                 flashRed();
             }
@@ -99,7 +104,6 @@ function pressed(pres) {
             stop2();
             if (!pres) {
                 miliseconds[0] = miliseconds[0] - (penalty * 100);
-                if (miliseconds[0] < 0) miliseconds[0] = 0; // Запобігаємо негативним значенням
                 updateDisplay();
                 flashRed();
             }
@@ -107,19 +111,24 @@ function pressed(pres) {
                 flashGreen();
             }
         }
-        showname(true);
+        if (checkbox_shownameimg.checked) {
+           showname(true);
+           cheakWinner();
+        } else {
+            playing = false;
+        }
         who = !who;
-        playing = false;
+        
     }
-    else {
+    if (!playing) {
         showname(false);
         if (who) {
             play1();
         } else {
             play2();
         }
-        playing = true;
     }
+    playing = !playing;
 }
 
 function showname(flag) {
@@ -154,19 +163,25 @@ document.addEventListener("keyup", function (e) {
 
 function cheakWinner() {
     if (miliseconds[0] <= 0) {
-        stopTimer(0);
-        stopTimer(1);
-        updateDisplay();
-        alert("Гравець 2 виграв!");
         game_ready = false; 
-        usedNumbers.length = 0; 
+        stopTimer(0);
+        stopTimer(1);
+        miliseconds[0] = 0;
+        updateDisplay();
+        usedNumbers.length = 0;
+         setTimeout(() => {
+            alert("Гравець 2 виграв!");
+        }, 700);
     } else if (miliseconds[1] <= 0) {
+        game_ready = false; 
         stopTimer(1);
         stopTimer(0);
+        miliseconds[1] = 0;
         updateDisplay();
-        alert("Гравець 1 виграв!");
-        game_ready = false;
         usedNumbers.length = 0;
+        setTimeout(() => {
+            alert("Гравець 1 виграв!");
+        }, 700);
     }
 }
 
@@ -224,7 +239,6 @@ function formatTime(milisec) {
 }
 
 function updateDisplay() {
-    cheakWinner();
     document.getElementById("timer1").innerText = formatTime(miliseconds[0]);
     document.getElementById("timer2").innerText = formatTime(miliseconds[1]);
 }
@@ -234,6 +248,7 @@ function startTimer(w) {
   interval[w] = setInterval(() => {
     miliseconds[w]--;
     updateDisplay();
+    cheakWinner();
   }, 10);
 }
 

@@ -50,7 +50,7 @@ button {
 .box {
     /*display: inline-block;*/
     width: 300px;
-    height: 370px;
+    height: 420px;
     border: 2px solid #4caf50;
     border-radius: 10px;
     padding: 0px;
@@ -228,3 +228,39 @@ img {
     width:fit-content;
     height: fit-content;
 }
+
+.custom-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+    .custom-checkbox input {
+        display: none;
+    }
+
+    .custom-checkbox .checkmark {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #4caf50;
+        border-radius: 4px;
+        margin-right: 10px;
+        position: relative;
+    }
+
+    .custom-checkbox input:checked + .checkmark::after {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 0px;
+        width: 6px;
+        height: 12px;
+        border: solid #2e6037;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }

@@ -21,7 +21,7 @@ let randomNumber;
 
 function blockIfMobile() {
     if (/Mobi|Android|iPhone|iPad|iPod|Oppo|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    document.body.innerHTML = "<h2 style='text-align:center; padding-top:50px;'>Сайт недоступний на мобільних пристроях</h2>";
+    document.body.innerHTML = "<h2 style='text-align:center; font-size: 50px; padding-top:50px;'>Сайт недоступний на мобільних пристроях</h2>";
   }
 }
 
@@ -150,6 +150,7 @@ function showname(flag) {
 
 
 window.addEventListener("DOMContentLoaded", () => { // Дочекаємося завантаження сторінки
+    blockIfMobile();
     loadCategoriesFromFile(url_categories);
     document.getElementById("randomImage").src = "images/icon.png";
     

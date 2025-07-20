@@ -35,5 +35,37 @@
 35 obrączka  
 36 łańcuszek 
 37 piercing  
-38 kolczyk  
+38 kolczyki  
 39 zegarek 
+40 adidasy 
+41 apaszka 
+42 baletki 
+43 bluza 
+44 body 
+45 bokserki 
+46 broszka 
+47 czapka 
+48 fartuch 
+49 frak 
+50 futro 
+51 golf 
+52 gorset 
+53 hełm 
+54 kalosze 
+55 kamizelka ratunkowa 
+56 kąpielówki 
+57 kaptur 
+58 kardigan 
+59 kokarda 
+60 koszulka na ramiączkach
+61 leginsy 
+62 krótkie spodenki 
+63 marynarka 
+64 mankietka
+65 szlafrok 
+66 szelki  
+67 sweter 
+68 płaszcz przeciwdeszczowy
+69 piżama 
+70 pasek 
+71 palto 

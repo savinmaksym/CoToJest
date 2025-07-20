@@ -1,0 +1,30 @@
+1 upał
+2 gorąco
+3 zimno
+4 deszcz
+5 śnieg
+6 grad
+7 chmura
+8 mróz 
+9 wiatr
+10 ulewa 
+11 burza 
+12 błyskawica 
+13 grzmot  
+14 huragan 
+15 mgła 
+16 powódź 
+17 susza 
+18 pożar 
+19 trzęsienie ziemi
+20 wybuch wulkanu
+21 lawina 
+22 temperatura 
+23 Świeci słońce
+24 Świeci księżyc
+25 Świecą gwiazdy
+26 opady
+27 tęcza
+28 gołoledź
+29 szron
+30 odwilż

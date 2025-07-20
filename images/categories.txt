@@ -9,3 +9,4 @@ transport 39
 owoce-warzywa_ 54  
 owoce-warzywa 34
 części ciała 75
+Pogoda.Katastrofy naturalne 30

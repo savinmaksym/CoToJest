@@ -23,12 +23,32 @@
 23 kiwi  
 24 arbuz  
 25 grejpfrut  
-26 marchew  
+26 marchewka  
 27 winogrono  
-28 wiśnia-czereśnia  
+28 wiśnia 
 29 brzoskwinia  
 30 ziemniak  
 31 ogórek  
 32 papryka  
 33 groszek  
 34 banan
+35 czereśnia 
+36 borówka 
+37 czarna porzeczka
+38 czerwona porzeczka
+39 figa
+40 truskawka
+41 malina 
+42 poziomka 
+43 żurawina 
+44 mirabelka
+45 agrest
+46 brokuł 
+47 chrzan
+48 dynia
+49 grzyb
+50 kalafior 
+51 szpinak
+52 seler
+53 pieczarka
+54 pietruszka

@@ -1,0 +1,36 @@
+1 badminton 
+2 akrobata 
+3 aerobik 
+4 balet 
+5 biegacz 
+6 boisko 
+7 boks 
+8 choreograf 
+9 ciężarek 
+10 drużyna 
+11 golf 
+12 grać w koszykówkę
+13 grać w siatkówkę
+14 grać w tenisa
+15 gwizdek 
+16 jazda na łyżwach
+17 jazda na rolkach
+18 jeździć konno
+19 kibic 
+20 jeździć na rowerze
+21 jeździć na nartach
+22 koszykarz 
+23 łucznictwo 
+24 mecz 
+25 medal 
+26 nurkować 
+27 piłka 
+28 ping-pong 
+29 szermierz 
+30 strzelanie 
+31 siłownia 
+32 sędzia 
+33 rugby 
+34 puchar 
+35 pływać 
+36 skakanka 

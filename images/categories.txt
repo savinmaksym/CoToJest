@@ -1,6 +1,6 @@
 kancelaria 46  
 odzież-akcesoria 71  
-gospodarstwo domowe 40  
+gospodarstwo_domowe 40  
 produkty 68  
 zawody-sport 31  
 zwierzęta 90  
@@ -8,5 +8,5 @@ technika 35
 transport 39  
 owoce-warzywa_ 54  
 owoce-warzywa 34
-części ciała 75
-Pogoda.Katastrofy naturalne 30
+części_ciała 75
+pogoda_patastrofy_naturalne 30

@@ -1,0 +1,71 @@
+1 torba  
+2 plecak  
+3 trampki  
+4 czapka z daszkiem  
+5 sukienka  
+6 koszulka  
+7 top dziewczęcy  
+8 spódnica  
+9 koszula  
+10 dżinsy  
+11 skarpetki  
+12 obcasy  
+13 kozaki  
+14 szorty  
+15 spodnie  
+16 garnitur  
+17 majtki  
+18 czapka zimowa  
+19 rękawiczki  
+20 maseczka  
+21 okulary  
+22 szalik  
+23 podkoszulek  
+24 kostium kąpielowy  
+25 dres  
+26 biustonosz  
+27 kurtka  
+28 kapelusz przeciwsłoneczny  
+29 klapki  
+30 sandały  
+31 rajstopy  
+32 krawat
+33 muszka  
+34 bransoletka  
+35 obrączka  
+36 łańcuszek 
+37 piercing  
+38 kolczyki  
+39 zegarek 
+40 adidasy 
+41 apaszka 
+42 baletki 
+43 bluza 
+44 body 
+45 bokserki 
+46 broszka 
+47 czapka 
+48 fartuch 
+49 frak 
+50 futro 
+51 golf 
+52 gorset 
+53 hełm 
+54 kalosze 
+55 kamizelka ratunkowa 
+56 kąpielówki 
+57 kaptur 
+58 kardigan 
+59 kokarda 
+60 koszulka na ramiączkach
+61 leginsy 
+62 krótkie spodenki 
+63 marynarka 
+64 mankietka
+65 szlafrok 
+66 szelki  
+67 sweter 
+68 płaszcz przeciwdeszczowy
+69 piżama 
+70 pasek 
+71 palto 

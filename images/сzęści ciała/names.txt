@@ -1,0 +1,75 @@
+1 bark 
+2 biodro 
+3 brew 
+4 broda 
+5 brzuch 
+6 cera 
+7 ciało 
+8 czaszka
+9 czoło 
+10 dłoń 
+11 dziąsło 
+12 gardło 
+13 głowa 
+14 jelita 
+15 język 
+16 kark 
+17 kciuk 
+18 klatka piersiowa 
+19 kolano 
+20 kość 
+21 kostka 
+22 kręgosłup 
+23 krew 
+24 krtań 
+25 łokieć 
+26 łopatka
+27 łydka 
+28 mały palec 
+29 miednica 
+30 mięsień 
+31 mózg 
+32 nadgarstek 
+33 nerka 
+34 nerw 
+35 noga 
+36 nos 
+37 oczy 
+38 pacha 
+39 palec 
+40 palec serdeczny 
+41 palec środkowy 
+42 palec wskazujący 
+43 paznokieć 
+44 pęcherz moczowy 
+45 pępek 
+46 piersi 
+47 pięta 
+48 plecy 
+49 płuca 
+50 podbródek 
+51 policzek 
+52 pośladki
+53 powieka 
+54 ramię 
+55 ręka 
+56 rzęsa 
+57 serce 
+58 skóra 
+59 stopa 
+60 szyja 
+61 talia 
+62 tchawica 
+63 twarz 
+64 ucho 
+65 udo 
+66 umysł 
+67 usta 
+68 warga 
+69 wąsy 
+70 włosy 
+71 ząb 
+72 żebro 
+73 zęby 
+74 zmarszczka 
+75 żołądek 

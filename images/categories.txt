@@ -1,10 +1,11 @@
-канцелярія 46
-одяг-аксесуари 71
-побут 40
-продукти 68
-професії-спорт 31
-тварини 90
-техніка 35
-транспорт 39
-фрукти-овоч_ 54
-фрукти-овочі 34
+kancelaria 46  
+odzież-akcesoria 71  
+gospodarstwo domowe 40  
+produkty 68  
+zawody-sport 31  
+zwierzęta 90  
+technika 35  
+transport 39  
+owoce-warzywa_ 54  
+owoce-warzywa 34
+części ciała 75

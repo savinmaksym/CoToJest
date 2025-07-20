@@ -12,46 +12,46 @@
 
 <body>
     <h1>Co to jest?</h1>
-    <h2 id="category">категорія</h2>
+    <h2 id="category">kategoria</h2>
 
 
     <div id="space">
 
         <div class="box">
-            <p id="label">Хто розпочинає</p>
+            <p id="label">Kto zaczyna</p>
             <div class="switcher">
-                <p id="player1">Гравець 1</p>
+                <p id="player1">Gracz 1</p>
                 <label class="switch">
                     <input type="checkbox" id="mySwitch">
                     <span class="slider"></span>
                 </label>
-                <p id="player2">Гравець 2</p>
+                <p id="player2">Gracz 2</p>
             </div>
 
-            <p id="label" for="categorySelect">Вибери категорію:</p>
+            <p id="label" for="categorySelect">Kategorie:</p>
             <select class="input" id="categorySelect">
-                <option disabled selected>Оберіть категорію</option>
+                <option disabled selected>Wybierz kategorię</option>
             </select>
 
             <label class="custom-checkbox">
                 <input type="checkbox" id="cheakBox_showNameImg">
                 <span class="checkmark"></span>
-                Показувати правильні відповіді
+                pokazać prawidłowe odpowiedzi?
             </label>
 
-            <p id="label">Тривалість раунда в сек</p>
-            <input id="seconds" class="input" name="number" type="number" placeholder="Секунд">
-            <p id="label">Штраф в сек</p>
-            <input id="penalty" class="input" name="number" type="number" placeholder="Секунд">
-            <button id="save" onclick="save(this)">Зберегти</button>
-            <p id="label_saved">Збережено!</p>
+            <p id="label">Czas trwania rundy w sek.</p>
+            <input id="seconds" class="input" name="number" type="number" placeholder="sekunda">
+            <p id="label">Kara w sek.</p>
+            <input id="penalty" class="input" name="number" type="number" placeholder="sekunda">
+            <button id="save" onclick="save(this)">Zapisz</button>
+            <p id="label_saved">Zapisano!</p>
         </div>
 
 
 
 
         <div id="pl1">
-            Гравець 1
+            Gracz 1
             <div id="timer1">00:00</div>
         </div>
 
@@ -59,12 +59,12 @@
 
 
         <div id="pl2">
-            Гравець 2
+            Gracz 2
             <div id="timer2">00:00</div>
         </div>
     </div>
     <p id="nameimg"></p>
-    <p id="help_text">SPACE - правильна відповідь. ENTER - пас та нарахування штрафу</p>
+    <p id="help_text">SPACJA – prawidłowa odpowiedź. ENTER – pas i naliczenie kary</p>
 
 </body>
 </html>

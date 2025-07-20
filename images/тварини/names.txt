@@ -77,7 +77,7 @@
 77 zając 
 78 wilk 
 79 wieloryb
-80 szczur     
+80 szczur 
 81 świnia 
 82 struś 
 83 sowa
@@ -87,4 +87,4 @@
 87 paw 
 88 papuga 
 89 pająk 
-90 owad
+90 owad 

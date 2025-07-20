@@ -1,4 +1,4 @@
-1 lampa biurkowa  
+1 lampa nastolna  
 2 atlas  
 3 korektor  
 4 stempel  
@@ -32,3 +32,15 @@
 32 plastelina  
 33 plecak  
 34 mapa  
+35 akwarela 
+36 atrament 
+37 blok rysunkowy
+38 ekierka 
+39 kartka papieru 
+40 kątomierz 
+41 naklejka 
+42 pióro 
+43 pisak
+44 segregator 
+45 spinacz
+46 zakreślacz 

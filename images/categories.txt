@@ -7,5 +7,6 @@ technika 35
 transport 39
 owoce-warzywa 54
 czesci_ciala 75
-pogoda_katastrofy_naturalne 30
+pogoda_katastrofy_naturalne 31
 sport 36
+zawody 64

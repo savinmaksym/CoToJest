@@ -1,0 +1,40 @@
+1 biurko 
+2 dywan 
+3 firanka 
+4 fotel 
+5 fotel bujany 
+6 huśtawka ogrodowa 
+7 kanapa 
+8 komoda 
+9 kosz na śmieci 
+10 kredens 
+11 krzesło
+12 lampa 
+13 ławka 
+14 leżak 
+15 łóżko 
+16 lustro 
+17 materac 
+18 meblościanka 
+19 obraz 
+20 obrus 
+21 półka 
+22 półka wisząca 
+23 regał 
+24 sofa 
+25 stół 
+26 szafa 
+27 szafka 
+28 szuflada 
+29 taboret 
+30 tapczan 
+31 wazon 
+32 wieszak 
+33 zasłona 
+34 żyrandol 
+35 zegar
+36 kaloryfer
+37 grzejnik 
+38 okap
+39 piekarnik
+40 zmywarka do naczyń
